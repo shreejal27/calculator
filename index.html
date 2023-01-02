@@ -2,36 +2,45 @@
   <head>
     <title>My Calculator</title>
     <link rel="stylesheet" href="styles.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Old+Standard+TT:wght@700&display=swap"
+      rel="stylesheet"
+    />
   </head>
   <body>
+    <div class="background"></div>
+
     <center>
       <div class="calculator">
         <div class="screen">
-          <div class="upperscreen"></div>
-          <div class="lowerscreen"></div>
+          <div class="upperscreen">123456789</div>
+          <div class="lowerscreen">0987654321</div>
         </div>
         <button class="">AC</button>
         <button class="">Del</button>
         <button class="">/</button>
-        <button class="">*</button>
+        <button class="operator">*</button>
         <br />
         <button class="">7</button>
         <button class="">8</button>
         <button class="">9</button>
-        <button class="">-</button>
-        <br />
+        <button class="operator">-</button>
+
         <button class="">4</button>
         <button class="">5</button>
         <button class="">6</button>
-        <button class="">+</button>
-        <br />
+        <button class="operator">+</button>
+
         <button class="">1</button>
         <button class="">2</button>
         <button class="">3</button>
-        <button class="">=</button>
-        <br />
-        <button class="">0</button>
-        <button class="">.</button>
+
+        <button class="operator" id="equal">=</button>
+
+        <button class="" id="zero">0</button>
+        <button class="operator">.</button>
       </div>
     </center>
   </body>
