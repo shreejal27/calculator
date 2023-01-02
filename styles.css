@@ -1,0 +1,25 @@
+*{
+    padding: 0;
+    margin: 0;
+}
+
+.calculator{
+    height: 300px;
+    width: 250px;
+    background-color: blue;
+}
+
+.screen{
+    height: 25%;
+    width: 100%;
+    background-color: antiquewhite;
+}
+.upperscreen{
+    height: 40%;
+    background-color: red;
+}
+
+.lowerscreen{
+    height: 60%;
+    background-color: yellow;
+}
