@@ -3,6 +3,7 @@ const operatorButtons = document.querySelectorAll(".operator");
 const equalsButton = document.querySelector(".equals");
 const deleteButton = document.querySelector(".delete");
 const clearButton = document.querySelector(".clear");
+const dotButton = document.querySelector(".dot");
 const upperClassTextElement = document.getElementById("top");
 const lowerClassTextElement = document.getElementById("bottom");
 
@@ -17,12 +18,12 @@ numberButtons.forEach(button => {
 
 operatorButtons.forEach(button => {
     button.addEventListener('click', ()=>{
-        check(button.innerText);
+        console.log(button.innerText);
     });
 });
 
 equalsButton.addEventListener('click', ()=>{
-        check("=");
+        console.log("=");
     });
 
 
@@ -35,20 +36,24 @@ clearButton.addEventListener('click', ()=>{
         clear();
     });
 
+dotButton.addEventListener('click',()=>{
+        if(values.includes('.')){
+            console.log("dot is there");
+        }
+        else{
+            values.push(dotButton.innerText);
+            updateLowerDisplay();
+            console.log("dot added")
+        }
 
-function check(clickItem){
-    console.log(clickItem);
-}
-
+});
 
 function clear(){
     upperClassTextElement.innerText="";
     lowerClassTextElement.innerText="0";
+    values.length = 0;
 }
 
-function del(){
-
-}
 
 function appendNumber(number){
     values.push(number);
