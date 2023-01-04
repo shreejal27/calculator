@@ -7,6 +7,7 @@
 
 body{
     background-color: #15173C;
+   
 }
 
 center{
@@ -26,28 +27,31 @@ center{
     background-color: #15173C;
     border-radius: 7px;
     box-shadow:0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+   
 }
 
 .screen{
     height: 25%;
     width: 100%;
-    margin-bottom: 10px;
-
+    margin-bottom: 15px;
     /* opacity: 50%; */
-  
+    
 }
 .upperscreen{
-    height: 40%;
-    background-color: blue;
-    color: burlywood;
+    height: 45%;   
     font-size: 16px;
 }
 
 .lowerscreen{
-    height: 60%;
-    background-color: red;
-    color: burlywood;
+    height: 55%;
     font-size: 20px;
+}
+
+p{
+    float: right;
+    padding-top: 14px;
+    color: burlywood;
+    margin-right: 15px;
 }
 
 button{
@@ -56,6 +60,7 @@ button{
     width: 50px;
     margin: 3px;
     background-color: #15173C;
+    font-size: 18px;
 }
 
 button:hover{
@@ -67,7 +72,7 @@ button:hover{
 
 #equal{
     float: right;
-    margin-right: 8px;
+    margin-right: 10px;
     padding: 20px;
     height: 70px;
     background-color: #F9544C;
