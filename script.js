@@ -11,6 +11,7 @@ let values = [];
 let values1 = [];
 let operand1=0;
 let operand2=0;
+let o;
 
 
 numberButtons.forEach(button => {
@@ -73,15 +74,27 @@ function operation(operator){
     operand1 = values;
     lowerClassTextElement.innerText="";
     upperClassTextElement.innerText= (values.join('')+" "+ operator);
+    o= operator;
+    if(updateLowerDisplay()){
+      
+        calculate();
+    }
 
-    calculate(operator);
-
+    
 }
 
-function calculate(operator){
-    let num = parseInt(values.join(''));
-    console.log(num); 
-    console.log("calculated");
+function calculate(){
+
+    operand1 = upperClassTextElement.innerHTML;
+    operand2 = lowerClassTextElement.innerHTML;
+    var temp;
+    upperClassTextElement.innerText= "";
+    var a=  parseInt(operand1);
+    var b= parseInt(operand2);
+    if (o == "+"){
+     temp = a+b;
+     lowerClassTextElement.innerHTML = temp;
+    }
 }
 
 function updateLowerDisplay(){
