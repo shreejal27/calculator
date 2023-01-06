@@ -33,8 +33,7 @@ equalsButton.addEventListener('click', ()=>{
 
 
 deleteButton.addEventListener('click', ()=>{
-        values.pop();
-        updateLowerDisplay();
+       deletee();
     });
 
 clearButton.addEventListener('click', ()=>{
@@ -50,6 +49,16 @@ dotButton.addEventListener('click',()=>{
 
 });
 
+function deletee(){
+    if(check()){
+        values.pop();
+        updateLowerDisplay();
+    }
+    else{
+        values1.pop();
+        updateLowerDisplay();
+    }
+}
 function clear(){
     upperClassTextElement.innerText="";
     lowerClassTextElement.innerText="0";
@@ -76,7 +85,6 @@ function operation(operator){
     upperClassTextElement.innerText= (values.join('')+" "+ operator);
     o= operator;
     if(updateLowerDisplay()){
-      
         calculate();
     }
 
@@ -87,19 +95,38 @@ function calculate(){
 
     operand1 = upperClassTextElement.innerHTML;
     operand2 = lowerClassTextElement.innerHTML;
-    var temp;
-    upperClassTextElement.innerText= "";
     var a=  parseInt(operand1);
     var b= parseInt(operand2);
+    var temp;
+    upperClassTextElement.innerText= "";
     if (o == "+"){
+    clear();
      temp = a+b;
      lowerClassTextElement.innerHTML = temp;
+     values.push(temp);
     }
+    if (o == "-"){
+        clear();
+         temp = a-b;
+         lowerClassTextElement.innerHTML = temp;
+         values.push(temp);
+        }
+        if (o == "*"){
+            clear();
+             temp = a*b;
+             lowerClassTextElement.innerHTML = temp;
+             values.push(temp);
+            }
+            if (o == "/"){
+                clear();
+                 temp = a/b;
+                 lowerClassTextElement.innerHTML = temp;
+                 values.push(temp);
+                }
 }
 
 function updateLowerDisplay(){
-    if(check()){
-        
+    if(check()){ 
         lowerClassTextElement.innerText= values.join('');
     }
     else{
@@ -111,7 +138,6 @@ function updateLowerDisplay(){
 function updateUpperDisplay(){
     upperClassTextElement.innerText= values.join('');
  }
-
 function check(){
     if (operand1 == 0){
         return true;
