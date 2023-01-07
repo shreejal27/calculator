@@ -47,6 +47,13 @@ dotButton.addEventListener('click',()=>{
         
         }
 
+        if( !values1.includes('.') && operand1 != 0){
+                values1.push(dotButton.innerText);
+                updateLowerDisplay();
+           
+        }
+
+
 });
 
 function deletee(){
